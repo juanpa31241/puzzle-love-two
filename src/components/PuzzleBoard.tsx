@@ -319,7 +319,7 @@ const PuzzleBoard: React.FC = () => {
 
 
                     </div>
-                    {matches ? <motion.div className="btn-dev" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} style={{ display: "flex", justifyContent: "center", margin: "1em" }}>
+                    {matches ? <motion.div className="btn-dev" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} style={{ display: "flex", justifyContent: "center" }}>
                         <button
                             style={{
                                 background: themeConfig[theme].gradient,
@@ -347,8 +347,8 @@ const PuzzleBoard: React.FC = () => {
                                     style={{
                                         cursor: "grabbing",
                                         zIndex: 9999,
-                                        width: "100px",
-                                        height: "100px",
+                                        width: "80px",
+                                        height: "80px",
                                         backgroundImage: `url(${piece.imageData})`,
                                         backgroundSize: "cover",
                                         borderRadius: "8px",

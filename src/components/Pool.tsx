@@ -5,10 +5,12 @@ import PuzzlePiece from "./PuzzlePiece";
 import { PuzzlePiece as PuzzlePieceType } from "../types";
 import { themeConfig } from "../data";
 import { useStateContext } from "../context/StateContext";
+import { useMediaQuery } from "usehooks-ts";
 
 const Pool: React.FC<{ pool: PuzzlePieceType[] | undefined }> = ({ pool }) => {
     const { setNodeRef } = useDroppable({ id: "pool" });
     const { theme } = useStateContext();
+    const matches = useMediaQuery("(max-width: 768px)");
 
     return (
         <div className="pool-container" ref={setNodeRef}>
@@ -18,7 +20,7 @@ const Pool: React.FC<{ pool: PuzzlePieceType[] | undefined }> = ({ pool }) => {
                         key={`pool-${piece.id}`}
                         piece={piece}
                         id={String(piece.id)}
-                        style={{ width: "100px", height: "100px", margin: "5px" }}
+                        style={{ width: matches ? "80px" : "100px", height: matches ? "80px" : "100px", margin: "5px" }}
                     />
                 ))}
             </div>

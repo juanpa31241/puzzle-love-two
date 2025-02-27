@@ -8,7 +8,7 @@ const ClueImage: React.FC<ClueImageProps> = React.memo(({ onLoad }) => {
     const [loaded, setLoaded] = useState(false);
 
     return (
-        <div style={{ position: "relative", width: "100px", height: "100px" }}>
+        <div style={{ position: "relative" }}>
             {!loaded && (
                 <motion.div
                     initial={{ opacity: 0.5 }}
@@ -31,7 +31,7 @@ const ClueImage: React.FC<ClueImageProps> = React.memo(({ onLoad }) => {
                     onLoad();
                 }}
                 alt="Clue"
-                style={{ display: loaded ? "block" : "none", width: "100%" }}
+                style={{ display: loaded ? "" : "none" }}
                 initial={{ opacity: 0 }}
                 animate={loaded ? { opacity: 1, rotate: [0, 20, -20, 0] } : {}}
                 transition={{ opacity: { duration: 0.3 }, repeat: Infinity, duration: 1.5, ease: "easeInOut" }}

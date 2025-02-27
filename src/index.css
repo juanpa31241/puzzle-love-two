@@ -572,6 +572,36 @@ h2 {
   background: linear-gradient(135deg, #dc2626, #b91c1c);
   box-shadow: 0px 6px 12px rgba(239, 68, 68, 0.5);
 }
+canvas {
+  pointer-events: none;
+}
+.puzzle-piece {
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.puzzle-piece:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.puzzle-piece:active {
+  transform: scale(0.95);
+}
+
+.game-container {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+}
+.board-container {
+  border: 4px solid transparent;
+  border-radius: 15px;
+  background-clip: padding-box;
+  padding: 15px;
+}
+.overlay-image img {
+  will-change: opacity, transform;
+}
 
 /* Íconos en los botones */
 .icon-btn {
@@ -584,8 +614,8 @@ h2 {
   #root {
   }
   .piece-stack {
-    width: 100px; /* Mayor tamaño para las piezas */
-    height: 100px;
+    width: 80px; /* Mayor tamaño para las piezas */
+    height: 80px;
   }
   .app-container {
     padding: 0;
@@ -594,16 +624,15 @@ h2 {
   }
   .game-container {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 1.5fr 0.3fr;
+    grid-template-rows: auto 1.5fr 0.2fr;
     padding: 10px;
     margin: 0 10px;
     gap: 5px;
   }
-  .board-container {
-    grid-column: 1/2;
-  }
+
   .btn-dev {
     grid-column: 1/4;
+    margin: 0;
   }
   .original-image {
     max-width: 90%; /* Hacemos la imagen más pequeña en dispositivos pequeños */
@@ -611,7 +640,6 @@ h2 {
   .original-image-container {
     grid-column: 2/4;
     padding: 0;
-    height: 150px;
     align-self: center;
   }
   .pool-container {
@@ -641,8 +669,9 @@ h2 {
   }
 
   .board-container {
+    grid-column: 1/2;
+    padding: 15px 0;
     width: 100%;
-    padding: 15px;
     grid-column: 1/4;
   }
 
@@ -696,7 +725,7 @@ h2 {
     justify-self: center;
   }
   .button-clue img {
-    width: 50%;
+    width: 40%;
   }
   .fixed-button {
     padding: 0.4em;
@@ -704,48 +733,4 @@ h2 {
   .overlay-image img {
     height: auto;
   }
-}
-canvas {
-  pointer-events: none;
-}
-.puzzle-piece {
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.puzzle-piece:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
-}
-
-.puzzle-piece:active {
-  transform: scale(0.95);
-}
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 5px #ffffff;
-  }
-  50% {
-    box-shadow: 0 0 20px #ffffff;
-  }
-  100% {
-    box-shadow: 0 0 5px #ffffff;
-  }
-}
-
-.button-clue {
-  animation: glow 1.5s infinite alternate;
-}
-.game-container {
-  border: 3px solid rgba(255, 255, 255, 0.3);
-  border-radius: 15px;
-  padding: 20px;
-}
-.board-container {
-  border: 4px solid transparent;
-  border-radius: 15px;
-  background-clip: padding-box;
-  padding: 15px;
-}
-.overlay-image img {
-  will-change: opacity, transform;
 }
