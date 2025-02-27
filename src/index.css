@@ -205,7 +205,6 @@ h1 {
 .overlay h1 {
   color: #ffd700; /* Color dorado */
   font-size: 2rem;
-  margin-top: 20px;
 }
 
 .overlay p {
@@ -707,12 +706,12 @@ canvas {
   }
   .overlay h1 {
     font-size: 2em; /* Aumentamos el tamaño del título */
-    margin-bottom: 20px;
   }
   .overlay p {
     width: 100%;
     font-size: 1em;
     max-width: 80%;
+    margin-bottom: 10px;
   }
   .overlay-sub {
     display: flex;
@@ -731,8 +730,11 @@ canvas {
   .fixed-button {
     padding: 0.4em;
   }
+  .overlay-image {
+    width: auto;
+  }
   .overlay-image img {
-    height: auto;
+    height: 300px;
   }
   .alert {
     font-size: 13px;
