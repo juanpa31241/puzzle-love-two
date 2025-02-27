@@ -688,8 +688,8 @@ canvas {
     max-height: 900px !important;
   }
   .main-title {
-    padding: 0.5em;
-    font-size: 1.3em;
+    padding: 0.2em 0;
+    font-size: 0.95em;
   }
   .sub-title {
     margin-top: 0;
