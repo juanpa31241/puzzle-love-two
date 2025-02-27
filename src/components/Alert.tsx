@@ -8,7 +8,7 @@ interface AlertProps {
 }
 
 const Alert: React.FC<AlertProps> = ({ message }) => {
-    const [visible, setVisible] = useState(true);
+    const [visible, setVisible] = useState(false);
     const { theme } = useStateContext();
 
     useEffect(() => {
@@ -16,7 +16,7 @@ const Alert: React.FC<AlertProps> = ({ message }) => {
             setVisible(true);
             const timer = setTimeout(() => {
                 setVisible(false);
-            }, 100000);
+            }, 4000);
             return () => clearTimeout(timer);
         }
     }, [message]);
