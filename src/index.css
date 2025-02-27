@@ -358,8 +358,9 @@ h2 {
   ); /* Degradado más atractivo */
   font-size: 17px;
   width: 100%;
-  max-width: 120px;
-  padding: 1em 30px;
+  max-width: 160px;
+  height: 160px;
+  padding: 30px;
   border-radius: 12px;
   border: none;
   cursor: pointer;
@@ -624,10 +625,8 @@ canvas {
   }
   .game-container {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1.5fr 0.2fr;
     padding: 10px;
     margin: 0 10px;
-    gap: 5px;
   }
 
   .btn-dev {
@@ -640,7 +639,6 @@ canvas {
   .original-image-container {
     grid-column: 2/4;
     padding: 0;
-    align-self: center;
   }
   .pool-container {
     align-self: center;
@@ -671,7 +669,7 @@ canvas {
 
   .board-container {
     grid-column: 1/2;
-    padding: 15px 0;
+    padding: 5px 0;
     width: 100%;
     grid-column: 1/4;
   }
@@ -724,6 +722,8 @@ canvas {
   .button-clue {
     padding: 0 !important;
     justify-self: center;
+    max-width: 110px;
+    height: 110px;
   }
   .button-clue img {
     width: 40%;
@@ -733,5 +733,9 @@ canvas {
   }
   .overlay-image img {
     height: auto;
+  }
+  .alert {
+    font-size: 13px;
+    padding: 0.5em;
   }
 }

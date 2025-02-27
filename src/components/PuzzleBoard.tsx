@@ -224,7 +224,7 @@ const PuzzleBoard: React.FC = () => {
                         className="button-clue"
                         onClick={getClue}
                         whileTap={{ scale: 0.9, transition: { duration: 0 } }}
-                        whileHover={{ scale: 1.2, transition: { duration: 0 } }}
+                        whileHover={{ scale: 1.1, transition: { duration: 0 } }}
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -268,7 +268,7 @@ const PuzzleBoard: React.FC = () => {
                                 className="button-clue"
                                 onClick={getClue}
                                 whileTap={{ scale: 0.9, transition: { duration: 0 } }}
-                                whileHover={{ scale: 1.2, transition: { duration: 0 } }}
+                                whileHover={{ scale: 1.1, transition: { duration: 0 } }}
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, ease: "easeOut" }}
@@ -388,7 +388,7 @@ const PuzzleBoard: React.FC = () => {
                         alt="Corazón latiendo"
                         style={{ width: "50px", height: "50px", margin: "0 auto" }}
                         initial={{ scale: 1 }}
-                        animate={{ scale: [1, 1.2, 1] }} // Efecto de latido
+                        animate={{ scale: [1, 1.1, 1] }} // Efecto de latido
                         transition={{ repeat: Infinity, duration: 0.6, ease: "easeInOut" }}
                     />
 
