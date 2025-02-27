@@ -737,7 +737,7 @@ canvas {
     height: 300px;
   }
   .alert {
-    font-size: 13px;
-    padding: 0.5em;
+    font-size: 14px;
+    padding: 0.8em;
   }
 }
