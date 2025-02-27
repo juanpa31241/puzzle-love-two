@@ -705,7 +705,7 @@ canvas {
     padding: 10px;
   }
   .overlay h1 {
-    font-size: 2em; /* Aumentamos el tamaño del título */
+    font-size: 1.6em; /* Aumentamos el tamaño del título */
   }
   .overlay p {
     width: 100%;
