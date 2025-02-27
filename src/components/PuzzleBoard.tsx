@@ -25,7 +25,6 @@ import ClueImage from "./ClueImage";
 const PuzzleBoard: React.FC = () => {
     const { imageId } = useParams(); // Obtener el ID desde la URL
     const [loaded, setLoaded] = useState(false);
-
     const matches = useMediaQuery("(max-width: 768px)");
     const navigate = useNavigate();
     const { selectedPuzzle, updatePuzzles, setSelectedPuzzle, puzzles, theme } = useStateContext();
@@ -34,7 +33,7 @@ const PuzzleBoard: React.FC = () => {
     const [answer, setAnswer] = useState("")
     const [moreClues, setMoreClues] = useState(false)
     const [alert, setAlert] = useState<string>("");
-    const { launchConfetti, shoot } = useConfetti();
+    const { launchConfetti, shoot, success } = useConfetti();
     const { activeId, handleDragEnd, handleDragStart } = useDragAndDrop(selectedPuzzle, setSelectedPuzzle, updatePuzzles, total, setAlert);
     usePuzzleInitialization(selectedPuzzle, setSelectedPuzzle, updatePuzzles, cols, rows);
     const active_question = selectedPuzzle?.questions.find(e => e.active)
@@ -67,7 +66,9 @@ const PuzzleBoard: React.FC = () => {
             setMoreClues(false);
             setAlert("");
             setTimeout(() => setAlert(locales[appConfig.language].success_clue), 0);
-
+            setTimeout(success, 0);
+            setTimeout(success, 100);
+            setTimeout(success, 200);
             return
         }
         if (answer !== "") {
@@ -152,6 +153,8 @@ const PuzzleBoard: React.FC = () => {
     };
 
     useEffect(() => {
+
+
         if (!imageId) {
             navigate("/");
             return;
