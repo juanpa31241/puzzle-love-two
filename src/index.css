@@ -358,7 +358,7 @@ h2 {
   ); /* Degradado más atractivo */
   font-size: 17px;
   width: 100%;
-  max-width: 160px;
+  max-width: 120px;
   padding: 1em 30px;
   border-radius: 12px;
   border: none;
@@ -662,6 +662,7 @@ canvas {
 
   .original-title {
     font-size: 18px; /* Reducimos el tamaño del subtítulo */
+    margin-bottom: 0;
   }
 
   .original-image {
